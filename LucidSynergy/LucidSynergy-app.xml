@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/1.0">
+  <filename>Lucid Synergy</filename>
+  <programMenuFolder>Lucid Synergy</programMenuFolder>
+  <copyright>2008</copyright>
+  <description>An application that integrates Lucid with the desktop</description>
+  <customUpdateUI>false</customUpdateUI>
+  <name>Lucid Synergy</name>
+  <id>org.lucid-desktop.synergy</id>
+  <version>1</version>
+  <initialWindow>
+    <content>index.html</content>
+    <height>300</height>
+    <width>500</width>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>false</visible>
+  </initialWindow>
+  <icon>
+    <image32x32>32x32.png</image32x32>
+    <image16x16>16x16.png</image16x16>
+  </icon>
+</application>
