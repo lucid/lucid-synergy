@@ -1,4 +1,21 @@
-/* AIRAliases.js - Revision: 1.5 */
+dojo.provide("dair.Aliases"); 
+
+/*=====
+dair.Aliases = {
+	// summary: 
+	//		A rollup file to ease the loading of the Aliases file.
+	// example:
+	// 		| dojo.require("dair")
+	// NOTE:
+	//		This should not have to be called directly. Consider dAIR.AIR instead.
+}
+=====*/
+
+// FIXME: Need to ensure this copyright statement is retained for this file in order
+//	to distribute this as a download. It is currently not possible to restore a 
+// copyright to an individual file, and must be done manually for now. 
+
+/* AIRAliases.js - Revision: 1.0 */
 
 // Copyright 2007-2008 Adobe Systems Incorporated.
 // All rights reserved.
@@ -27,22 +44,19 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-
-var air;
-if (window.runtime) 
-{
-    if (!air) air = {};
+var air = window.air = {};
+if(window.runtime){
+	
     // functions
     air.trace = window.runtime.trace;
     air.navigateToURL = window.runtime.flash.net.navigateToURL;
     air.sendToURL = window.runtime.flash.net.sendToURL;
 
-
     // file
     air.File = window.runtime.flash.filesystem.File;
     air.FileStream = window.runtime.flash.filesystem.FileStream;
     air.FileMode = window.runtime.flash.filesystem.FileMode;
-
+ 
     // events
     air.AsyncErrorEvent = window.runtime.flash.events.AsyncErrorEvent;
     air.BrowserInvokeEvent = window.runtime.flash.events.BrowserInvokeEvent;
@@ -62,7 +76,6 @@ if (window.runtime)
     air.StatusEvent = window.runtime.flash.events.StatusEvent;
     air.TimerEvent = window.runtime.flash.events.TimerEvent;
     air.ActivityEvent = window.runtime.flash.events.ActivityEvent;
-    air.ErrorEvent = window.runtime.flash.events.ErrorEvent;
     
     // native window
     air.NativeWindow = window.runtime.flash.display.NativeWindow;
@@ -189,14 +202,4 @@ if (window.runtime)
     air.__defineGetter__("ServiceMonitor", function() { return window.runtime.air.net.ServiceMonitor; })
     air.__defineGetter__("SocketMonitor", function() { return window.runtime.air.net.SocketMonitor; })
     air.__defineGetter__("URLMonitor", function() { return window.runtime.air.net.URLMonitor; })
-    
-    // update framework
-    air.__defineGetter__("ApplicationUpdater", function() { return window.runtime.air.update.ApplicationUpdater; });
-    air.__defineGetter__("ApplicationUpdaterUI", function() { return window.runtime.air.update.ApplicationUpdaterUI; });
-    air.__defineGetter__("UpdateEvent", function() { return window.runtime.air.update.events.UpdateEvent; });
-    air.__defineGetter__("StatusUpdateEvent", function() { return window.runtime.air.update.events.StatusUpdateEvent; });
-    air.__defineGetter__("StatusUpdateErrorEvent", function() { return window.runtime.air.update.events.StatusUpdateErrorEvent; });
-    air.__defineGetter__("DownloadErrorEvent", function() { return window.runtime.air.update.events.DownloadErrorEvent; });
-    air.__defineGetter__("StatusFileUpdateEvent", function() { return window.runtime.air.update.events.StatusFileUpdateEvent; });
-    air.__defineGetter__("StatusFileUpdateErrorEvent", function() { return window.runtime.air.update.events.StatusFileUpdateErrorEvent; });
 }

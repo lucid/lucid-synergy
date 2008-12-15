@@ -1,5 +1,7 @@
 dojo.provide("synergy._base");
-
+dojo.require("dair.AIR");
+dojo.require("dair.Application");
+dojo.require("dair.Window");
 air.NativeApplication.nativeApplication.autoExit = false; 
 
 synergy = {
